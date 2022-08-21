@@ -1,0 +1,514 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif; 
+}
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tỏng quan đến chi tiết
+
+*/
+/* 
+1. Vị trí
+2. Kích thước
+3. Màu Sắc
+4. Kiểu dáng ( kiểu chữ, tròn , vuông ... 
+*/
+/* Conmon - Những class chung */
+.clear {
+    clear:both;
+}
+.text-white {
+    color:#fff !important;
+    /* Chỉ định ưu tiên các đoạn có chữ màu trắng */
+}
+
+.Row {
+    margin-left: -8px;
+    margin-right: -8px;
+
+
+
+}
+.col {
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+
+
+}
+.col-third {
+    width:calc(100% / 3);
+}
+
+.col-half {
+    width: 50%;
+}
+.text-center {
+    text-align: center !important;
+}
+
+/* Main - Phần Css cho nội dung chính */
+
+#main {
+
+}
+
+#header {
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /* dính sát lên trên và dính sát sang bên trái và phải */
+    z-index: 1;
+    /* đê cho nổi lên trên cùng kiểu như layer trong pts */
+}
+#nav {
+    display:inline-block;
+    /* Tạo độ rộng cho vùng navication chỉ đến hết khung ký tự của nó */
+}
+#nav, .subnav {
+    list-style: none;
+    /* bỏ đi dấu chấm sinh ra khi tạo list */
+}
+
+#nav > li {
+    display: inline-block;
+    /* chỉ định các thẻ nằm trong chiều ngang */
+}
+#nav > li > a {
+    color:#fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 24px;
+    display:block;
+    /* chỉ định kích thước thẻ a */
+}
+#nav li:hover .subnav {
+    display:block;
+}
+
+
+#nav > li:hover > a {
+    color:#000;
+    display:inline-block;
+    background-color: #ccc;   
+    /* Tạo nút giữ chuột vào đổi màu */
+} 
+
+#nav .subnav > li:hover > a {
+    color: rgb(255, 0, 0);
+    background-color: #ccc;
+    /* Tạo nút giữ chuột vào đổi màu */
+}
+
+
+#nav .subnav {
+    display:none;
+    position: absolute;
+    min-width: 160px;
+    background-color: #fff ;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    
+}
+
+
+#nav .subnav a {
+    color:#000;
+    display: block;
+    padding: 0 16px;
+    line-height: 38px ;
+    Top: 2px;
+    left: 0;
+}
+
+#nav .tro-xuong {
+    font-size: 18px;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0 20px;
+    line-height: 50px;
+    cursor:pointer;
+    display:inline-block;
+
+}
+#header .search-icon {
+    color:#ccc;
+    font-size: 30px;
+    line-height:50px;
+}
+
+#header .search-btn:hover {
+    color:#000;
+    background-color:#fff;
+    line-height: 50px;
+}
+
+#slider {
+    position:relative;
+    margin-top: 50px;
+    padding-top: 50%; 
+    /* padding-top: 50%; chính là kích thuớc tỷ lệ theo chiều ngang của chính nó */
+    background: url("/assets/img/slider/bim-cho-quan-ly-du-an.jpg") top center / cover no-repeat;
+}
+
+#slider .text-conten {
+    height:150px;
+    position:absolute;
+    bottom:0px;
+    color:#000;
+    background-color: rgba(204,204,204,0.8);
+    width: 100%;
+    /* transform:translateX(-50%); */
+    text-align: center;
+}
+#slider .text-heading {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-weight:500;
+    font-size: 40px;
+    padding-top: 10px;
+    text-transform: uppercase;
+
+}
+#slider .text-description {
+    font-size: 30px;
+    line-height: 60px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    
+}
+
+
+#content {
+    
+}
+
+#content .content-section {
+    Width: 1500px;
+    padding: 64px 0;
+    margin-left:auto;
+    margin-right:auto;
+
+
+}
+#content .section-heading {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-top:25px;
+}
+#content .section-sub-heading {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 25px;
+    font-style:italic;
+    opacity: 0.6;
+
+}
+#content .about-text {
+    margin-top: 25px;
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1.6;
+
+}
+
+
+#content .member-list {
+    margin-top: 48px;
+    overflow:hidden;
+
+    /* Cách 2 tạo thẻ div = class và Css cho calass là "clear=both */
+    /* Mục đích over flow để cho khi list CDE-LOD-BEP click chọn vào list nó sẽ ôm chọn cả 3 đối tượng trọng thẻ div */
+}
+#content .member-name {
+    font-size: 25px;
+
+}
+#content .member {
+    margin-top:20px;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* BWT - Tour-section */
+.tranding-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+    /* list-style để bỏ dấu chấm tròn trước list*/
+
+}
+
+.tickets-list .sold-out {
+    background-color: red;
+    color:#fff;
+    padding:3px 4px;
+    margin-left: 16px;
+
+}
+.tickets-list li {
+    color:#757575;
+    font-size: 20px;
+    padding: 4px 16px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.tickets-list .quantity {
+    float:right;
+    width: 110px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 5%;
+    text-align: center;
+    line-height: 25px;
+
+}
+/* place */
+.place-list {
+    margin-top: 32px;
+    margin-bottom: 48px;
+
+    /* viết tắt margin: 32px -8px 0; */
+    padding-bottom: 100px;
+    /* padding-bottom để kéo dài vùng màu đen của nhóm list */
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+.place-img:hover {
+    opacity: 0.5;
+
+}
+
+.place-body {
+    background-color: #fff;
+    font-size: 20px;
+    padding: 16px;
+}
+.place-heading {
+    font-size: 35px;
+    font-weight: 600;
+}
+.place-time {
+    color:#757575;
+    margin-top: 15px;
+}
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.place-buy-btn {
+    color:#fff;
+    font-size: larger;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 20px;
+
+
+}
+.place-buy-btn:hover {
+    background-color:#ccc;
+}
+
+/* Css cho nút đăng ký khóa học */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    /* Flex. center có chức năng để bảng thông báo nằm giữa */
+    display: none;
+
+}
+.modal.open {
+    display: flex;
+}
+.modal-container {
+    background-color: #fff;
+    position: relative;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    /* mục đích max-width để khi co nhỏ trình duyệt from mẫu vẫn cách 2 bên 16px */
+    min-height: 200px;
+    animation: modalFadeIn ease 0.5s;
+    
+
+    
+
+}
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color:#fff;
+}
+
+.modal-heading-icon {
+    margin-right: 16px;
+
+}
+
+.modal-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+    padding: 16px;
+    cursor:pointer;
+    opacity: 0.5;
+}
+.modal-close:hover {
+    opacity: 1;
+
+}
+.modal-body {
+    padding: 16px;
+}
+.modal-label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 12px;
+ 
+    
+}
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets {
+    background-color: #009688;
+    border: none;
+    color:#fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 20px;
+    cursor: pointer;
+
+}
+#buy-tickets:hover {
+    opacity: 0.7;
+}
+.ti-credit-card {
+    padding: 10px;
+}
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+    
+}
+.modal-footer a {
+    color: #009688;
+}
+
+/* CSS cho giảng viên */
+.teacher-list {
+    margin: 32px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -30px;
+    /* viết tắt margin: 32px -8px 0; */
+    padding-bottom: 100px;
+}
+.teacher-item {
+    float:left;
+    width: calc(100% / 3);
+    padding: 0 8px;
+}
+.teacher-img {
+    width: 100%;
+    display: block;
+
+}
+.teacher-img:hover {
+    opacity: 0.5;
+
+}
+.teacher-body {
+    background-color: #000;
+    font-size: 20px;
+    padding: 16px;
+}
+.teacher-heading {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+.Education,
+.School,
+.year,
+.Cefiticate,
+.Company
+{
+    color:white;
+    margin-top: 15px;
+}
+.Class-teach {
+    color:#000;
+    background-color:#fff;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+
+
+
+}
+.Class-teach:hover {
+    background-color:#ccc;
+}
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#footer {
+
+}
